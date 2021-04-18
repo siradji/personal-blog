@@ -4,8 +4,8 @@ import { FC, ReactNode } from 'react';
 
 // types
 
-type LinkVariant = 'primary' | 'secondary' | 'white' | 'dark';
-type LinkSize = 'sm' | 'md' | 'lg';
+export type LinkVariant = 'primary' | 'secondary' | 'white' | 'dark';
+export type LinkSize = 'sm' | 'md' | 'lg';
 
 // interfaces
 
@@ -19,10 +19,10 @@ export interface LinkProps {
 // mappers
 
 const VariantMapper: Record<LinkVariant, string> = {
-  primary: 'text-main-red',
-  secondary: 'text-main-blue',
-  white: 'text-main-white',
-  dark: 'text-soft-blue',
+  primary: 'text-main-red hover:text-main-white',
+  secondary: 'text-main-blue hover:text-main-white',
+  white: 'text-main-white hover:text-main-red',
+  dark: 'text-soft-blue hover:text-main-white',
 };
 
 const SizeMapper: Record<LinkSize, string> = {
