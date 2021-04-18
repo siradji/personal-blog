@@ -15,7 +15,7 @@ export interface HeaderLinksProps  {
 export const HeaderLinks: FC<HeaderLinksProps> = ({linksColor = "white", linksSize = "md"}) => {
     return (
         <div data-testid="main-headerlinks-cp">
-            <ul className="flex flex-row justify-between">
+            <ul className="flex flex-row justify-between md:space-x-4">
                 <li>
                 <Link
                 to="/"
