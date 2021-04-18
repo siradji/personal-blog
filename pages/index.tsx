@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head';
+import { Link } from '@components/atoms/Link';
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
 
       <main>
         <h1 className="text-main-red">Hello world</h1>
+        <Link to="/home" variant="primary">
+          Click me
+        </Link>
       </main>
     </>
   );
