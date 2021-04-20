@@ -3,25 +3,25 @@ import { FC } from 'react';
 import { Link, LinkSize, LinkVariant } from 'components/atoms/Link';
 import clsx from 'clsx';
 
-type HeaderLinksDirection = "mobile" | "desktop";
+type HeaderLinksDirection = 'mobile' | 'desktop';
 export interface HeaderLinksProps {
   linksColor?: LinkVariant;
   linksSize?: LinkSize;
   flow?: HeaderLinksDirection;
 }
 
-const HeaderTypeMapper: Record<HeaderLinksDirection, string> =  {
-  desktop: 'flex-row md:space-x-4', 
-  mobile: 'flex-col space-y-4'
-}
+const HeaderTypeMapper: Record<HeaderLinksDirection, string> = {
+  desktop: 'flex-row md:space-x-4',
+  mobile: 'flex-col space-y-4',
+};
 
 export const HeaderLinks: FC<HeaderLinksProps> = ({
   linksColor = 'white',
   linksSize = 'md',
-  flow = "desktop" 
+  flow = 'desktop',
 }) => (
   <div data-testid="main-headerlinks-cp">
-    <ul className={clsx("flex justify-between ", HeaderTypeMapper[flow])}>
+    <ul className={clsx('flex justify-between ', HeaderTypeMapper[flow])}>
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
           Home
