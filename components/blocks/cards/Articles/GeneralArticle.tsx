@@ -1,11 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const GeneralArticle = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+const GeneralArticle = () => <div />;
 
-export default GeneralArticle
+export default GeneralArticle;

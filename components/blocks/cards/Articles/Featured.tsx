@@ -1,9 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const Featured = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+export const Featured = () => <div />;
