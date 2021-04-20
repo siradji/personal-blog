@@ -1,6 +1,6 @@
 {
     "parser": "@babel/eslint-parser",
-    "extends": "airbnb-typescript", 
+    "extends": "airbnb", 
     "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks"],
     "rules": {
         "react/jsx-uses-react": "off",

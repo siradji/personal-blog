@@ -1,12 +1,14 @@
 import '../styles/globals.css';
 import '../styles/responsive.css';
 
-import {MainLayout} from 'components/shared/mainLayout'
+import { MainLayout } from 'components/shared/mainLayout';
 
 function MyApp({ Component, pageProps }) {
-  return <MainLayout>
+  return (
+    <MainLayout>
       <Component {...pageProps} />
-  </MainLayout>;
+    </MainLayout>
+  );
 }
 
 export default MyApp;

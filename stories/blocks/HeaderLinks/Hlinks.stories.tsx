@@ -8,7 +8,7 @@ import {HeaderLinks, HeaderLinksProps} from "components/blocks/HeaderLinks";
 export default {
     title: "Blocks/Header-Links",
     component: HeaderLinks,
-    argType: {
+    argTypes: {
         linksColor: {control: "color"},
         linksSize: {control: "size"}
 

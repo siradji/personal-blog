@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Link } from '@components/atoms/Link';
+import { Link } from 'components/atoms/Link';
 
 export default function Home() {
   return (
