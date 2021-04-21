@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Link } from 'components/atoms/Link';
+import { Typography } from 'components/atoms/typography';
 
 export default function Home() {
   return (
@@ -10,10 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-main-red">Hello world</h1>
-        <Link to="/home" variant="primary">
-          Click me
-        </Link>
+        <Typography color="white" variant="h1">
+          Heading
+        </Typography>
       </main>
     </>
   );
