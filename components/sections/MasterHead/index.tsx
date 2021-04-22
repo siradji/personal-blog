@@ -9,13 +9,11 @@ const article: Article = {
   tags: ['React', 'Javascript', 'Front end'],
 };
 
-export const MastHead = () => {
-  return (
-    <div className="flex flex-row justify-between">
-      <FeaturedArticle featuredArticle={article} />
-      <AboutCard cardHeading="Suraj Auwal">
-        Hi, I am Suraj, a passionate javascript developer and content creator
-      </AboutCard>
-    </div>
-  );
-};
+export const MastHead = () => (
+  <div className="flex flex-row justify-between">
+    <FeaturedArticle featuredArticle={article} />
+    <AboutCard cardHeading="Suraj Auwal">
+      Hi, I am Suraj, a passionate javascript developer and content creator
+    </AboutCard>
+  </div>
+);
