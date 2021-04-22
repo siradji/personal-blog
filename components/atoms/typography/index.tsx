@@ -61,13 +61,11 @@ export const Typography: FC<GenericTypographyProps> = ({
   children,
   variant = 'h1',
   color = 'white',
-}: GenericTypographyProps) => {
-  return (
-    <>
-      {getComponent(variant, [VariantMapper[variant], ColorMapper[color]], children)}
-    </>
-  );
-};
+}: GenericTypographyProps) => (
+  <>
+    {getComponent(variant, [VariantMapper[variant], ColorMapper[color]], children)}
+  </>
+);
 
 const H1 = ({ props, content }) => (
   <h1 data-testid="main-typo-cp" className={props}>
@@ -101,6 +99,7 @@ const H5 = ({ props, content }) => (
 
 const P = ({ props, content }) => (
   <p data-testid="main-typo-cp" className={props}>
-    {content}{' '}
+    {content}
+    {' '}
   </p>
 );

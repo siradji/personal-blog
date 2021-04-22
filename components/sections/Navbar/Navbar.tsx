@@ -11,8 +11,7 @@ export const Navbar: FC<{}> = () => {
   const [sidebarStatus, setSidebarStatus] = useState(false);
   const [screenDimension] = useScreenResize();
 
-  const handleSideBarToggle = (e: React.MouseEvent<HTMLButtonElement>) =>
-    setSidebarStatus(!sidebarStatus);
+  const handleSideBarToggle = (e: React.MouseEvent<HTMLButtonElement>) => setSidebarStatus(!sidebarStatus);
 
   useEffect(() => {
     if (sidebarStatus) {

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { Menu } from './MenuIcon';
 import { HeaderLinks } from 'components/blocks/HeaderLinks';
+import { Menu } from './MenuIcon';
 
 export const SideBar = ({ closeModal, isOpened }) => (
   <aside
