@@ -4,14 +4,15 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      'main-red': "#ff4a57",
-      'main-white': "#fefefe", 
-      'main-blue': "#1f2235",
-      'soft-blue': "#23263a"
-    }
+      'main-red': '#ff4a57',
+      'main-white': '#fefefe',
+      'main-blue': '#1f2235',
+      'soft-blue': '#23263a',
+      'ui-purple': '#654ea3',
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

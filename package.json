@@ -12,7 +12,8 @@
     "lint-fix": "eslint --ext .ts,.tsx . --fix",
     "format": "prettier-eslint --write /Users/siradjiawoual/projects/personal/personal-blog/'**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --project-token=45922b71742c"
   },
   "dependencies": {
     "clsx": "^1.1.1",
