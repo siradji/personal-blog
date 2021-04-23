@@ -12,9 +12,8 @@ const article: Article = {
 export const MastHead: FC<{}> = () => (
   <div className="flex flex-col-reverse md:flex-row justify-between my-10 space-x-4">
     <FeaturedArticle featuredArticle={article} />
-    <AboutCard cardHeading="Suraj Auwal">
-      Hi! My name is Suraj a javascript fanboy and content creator. Nice to e-meet
-      you!
+    <AboutCard cardHeading="Hi, I am Suraj!">
+      I am a javascript fanboy and content creator. Nice to e-meet you!
     </AboutCard>
   </div>
 );

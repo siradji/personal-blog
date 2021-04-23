@@ -7,6 +7,11 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+button {
+  max-width: 14rem;
+  min-width: 10rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +33,11 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 997;
+}
+
+.article-card {
+  min-width: 10rem;
+  width: 100%;
 }
 
 /* gradients */
@@ -70,4 +80,46 @@ body {
 
 .very-blue {
   background: #0575e6; /* fallback for old browsers */
+}
+
+.pacific-dream {
+  background: #34e89e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0f3443,
+    #34e89e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0f3443,
+    #34e89e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.pink-villian {
+  background: #f4c4f3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fc67fa,
+    #f4c4f3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fc67fa,
+    #f4c4f3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bad-grey {
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

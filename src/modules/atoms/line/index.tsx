@@ -11,8 +11,6 @@ export const LineComponent: FC<LineInterface> = ({
   height = 5,
   width = 'full',
   background = 'primary',
-}) => {
-  return (
-    <hr className={clsx(`border-${height} w-${width} rounded-sm`, background)} />
-  );
-};
+}) => (
+  <hr className={clsx(`border-${height} w-${width} rounded-sm`, background)} />
+);

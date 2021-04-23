@@ -1,13 +1,14 @@
 import clsx from 'clsx';
 import { FC, ReactNode, useContext } from 'react';
 import { SidebarContext } from 'shared-context';
+
 export interface ContainerProps {
   children: ReactNode;
 }
 
-export const Container: FC<ContainerProps> = ({ children }: ContainerProps) => {
+export const Container: FC<ContainerProps> = ({ children }: ContainerProps) =>
   // const { isSideBarOpened } = useContext(SidebarContext);
-  return (
+  (
     <div
       data-testid="main-container-cp"
       className={clsx(
@@ -23,4 +24,3 @@ export const Container: FC<ContainerProps> = ({ children }: ContainerProps) => {
       /> */}
     </div>
   );
-};

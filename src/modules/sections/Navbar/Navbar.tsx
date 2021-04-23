@@ -1,12 +1,14 @@
-import React, { FC, useEffect, useState, useContext } from 'react';
+import React, {
+  FC, useEffect, useState, useContext,
+} from 'react';
 
 import { Logo } from 'modules/atoms/logo';
 import { HeaderLinks } from 'modules/blocks/HeaderLinks';
 
 import useScreenResize from 'hooks/useScreenResize';
-import { SideBar } from './Sidebar';
 import { Menu } from 'modules/atoms/headerIcons';
 import { SidebarContext } from 'shared-context';
+import { SideBar } from './Sidebar';
 
 export const Navbar: FC<{}> = () => {
   const [sidebarStatus, setSidebarStatus] = useState(false);

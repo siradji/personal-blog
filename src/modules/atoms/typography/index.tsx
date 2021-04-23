@@ -70,7 +70,7 @@ export const Typography: FC<GenericTypographyProps> = ({
       variant,
       [
         VariantMapper[variant],
-        customColor ? customColor : ColorMapper[color],
+        customColor || ColorMapper[color],
         centered ? 'text-center' : '',
       ],
       children,

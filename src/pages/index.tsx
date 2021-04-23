@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Typography } from 'modules/atoms/typography';
 import { MastHead } from 'modules/sections/MasterHead';
 import { Container } from 'modules/shared/';
-import { HomepageArticles } from '@modules/sections/HomepageArticles';
+import { HomepageArticles } from 'modules/sections/HomepageArticles';
 
 export default function Home() {
   return (

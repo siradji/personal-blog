@@ -1,6 +1,9 @@
-import { FC, ReactNode, useState, useContext } from 'react';
+import {
+  FC, ReactNode, useState, useContext,
+} from 'react';
 import { Navbar } from 'modules/sections/Navbar';
 import { SidebarContext } from 'shared-context';
+
 export interface MainLayoutProps {
   children: ReactNode;
 }
