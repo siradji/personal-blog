@@ -6,21 +6,14 @@ export interface ContainerProps {
   children: ReactNode;
 }
 
-export const Container: FC<ContainerProps> = ({ children }: ContainerProps) =>
+export const Container: FC<ContainerProps> = ({ children }: ContainerProps) => (
   // const { isSideBarOpened } = useContext(SidebarContext);
-  (
-    <div
-      data-testid="main-container-cp"
-      className={clsx(
-        'sm:max-w-screen-sm md:max-w-screen-lg lg:max-w-screen-xl mx-auto',
-      )}
-    >
-      {children}
-      {/* <div
-        className={clsx(
-          'main-overlay-cp transition-opacity duration-500 ease-in-out',
-          isSideBarOpened && 'overlay-active',
-        )}
-      /> */}
-    </div>
-  );
+  <div
+    data-testid="main-container-cp"
+    className={clsx(
+      'mobile-container   sm:max-w-screen-sm md:max-w-screen-lg lg:max-w-screen-xl mx-auto',
+    )}
+  >
+    {children}
+  </div>
+);

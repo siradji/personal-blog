@@ -36,7 +36,7 @@ export const FeaturedArticle: FC<FeaturedArticleProps> = ({ featuredArticle }) =
         <Typography variant="h4" color="white">
           {featuredArticle.preview}
         </Typography>
-        <div className="flex flex-row space-x-3">
+        <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
           <Chip rndColors={1} tags content="react" />
           <Chip rndColors={2} tags content="javascript" />
           <Chip rndColors={3} tags content="beginners" />

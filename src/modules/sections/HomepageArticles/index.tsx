@@ -1,18 +1,44 @@
-import { SectionHeader } from 'modules/blocks/sectionHeader';
-import mockData from 'mock/data/articles.json';
-import GeneralArticle from 'modules/blocks/cards/Articles/GeneralArticle';
+import { FC } from 'react';
 
-export const HomepageArticles = () => (
-  <section>
-    <SectionHeader
-      heading=" Top Articles this month"
-      lineColor="text-ui-purple"
-      headingColor="text-ui-purple"
-    />
-    <div className="grid grid-cols-3 gap-4">
-      {mockData.map(mock => (
-        <GeneralArticle data={mock} />
-      ))}
-    </div>
-  </section>
-);
+import data from 'mock/data/articles.json';
+
+// components
+import { Link } from 'modules/atoms/Link';
+import { SectionFeatured } from '@modules/blocks/sectionFeatured';
+import { SectionHeader } from 'modules/blocks/sectionHeader';
+import { SectionRelated } from '@modules/blocks/sectionRelated';
+import clsx from 'clsx';
+
+export interface HomepageArticlesProps {
+  sectionHeading: string;
+  sectionColor?: string;
+  direction?: 'left' | 'right';
+}
+
+export const HomepageArticles: FC<HomepageArticlesProps> = ({
+  sectionHeading,
+  sectionColor = 'text-ui-purple',
+}) => {
+  return (
+    <section className="my-5">
+      <SectionHeader
+        heading={sectionHeading}
+        lineColor={sectionColor}
+        headingColor={sectionColor}
+      />
+      <div className="flex flex-col md:flex-row justify-between flex-1 md:space-x-8">
+        <SectionFeatured data={data[0]} />
+        <div className="md:space-y-3">
+          <div className="flex flex-col space-y-5">
+            {data.slice(0, 3).map((d, i: number) => (
+              <SectionRelated data={d} key={i} />
+            ))}
+          </div>
+          <Link variant="purple" size="lg" to="/">
+            View All articles
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};

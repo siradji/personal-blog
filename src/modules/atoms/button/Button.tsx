@@ -36,18 +36,16 @@ export const Button: FC<ButtonProps> = ({
   variant,
   children,
   rounded = false,
-}) => {
-  return (
-    <button
-      data-testid="main-button-cp"
-      onClick={(e: any) => onClick(e)}
-      className={clsx(
-        'outline-none text-lg transition duration-500  ease-in-out py-2 px-5 hover:border-opacity-100 ',
-        ButtonMapper[variant],
-        rounded ? 'rounded-lg' : 'rounded-md',
-      )}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <button
+    data-testid="main-button-cp"
+    onClick={(e: any) => onClick(e)}
+    className={clsx(
+      'outline-none text-lg transition duration-500  ease-in-out py-2 px-5 hover:border-opacity-100 ',
+      ButtonMapper[variant],
+      rounded ? 'rounded-lg' : 'rounded-md',
+    )}
+  >
+    {children}
+  </button>
+);

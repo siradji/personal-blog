@@ -1,6 +1,4 @@
-import React, {
-  FC, useEffect, useState, useContext,
-} from 'react';
+import React, { FC, useEffect, useState, useContext } from 'react';
 
 import { Logo } from 'modules/atoms/logo';
 import { HeaderLinks } from 'modules/blocks/HeaderLinks';
@@ -34,9 +32,9 @@ export const Navbar: FC<{}> = () => {
   return (
     <header>
       <nav className="bg-main-blue py-2 sticky top-0 shadow-md">
-        <div className="sm:max-w-screen-sm md:max-w-screen-lg lg:max-w-screen-xl mx-auto">
-          <div className="flex flex-row justify-between items-center">
-            <Logo />
+        <div className="mobile-container max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+          <div className="flex justify-between">
+            <Logo mobile={screenDimension.isMobile} />
             {screenDimension.isMobile ? (
               <Menu onClick={handleSideBarToggle} />
             ) : (

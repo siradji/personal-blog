@@ -11,22 +11,23 @@ const randomChipColors = {
 export interface ChipPropsInterface {
   rndColors: number;
   content: string;
-  tags: boolean;
+  tags?: boolean;
+  rounded?: boolean;
 }
 
 export const Chip: FC<ChipPropsInterface> = ({
   rndColors,
   content,
-  tags = false,
-}) => {
-  return (
-    <span
-      className={clsx(
-        randomChipColors[rndColors],
-        'rounded-xl p-1 px-4 text-center text-sm ',
-      )}
-    >
-      {`${tags ? '#' : ''}${content}`}
-    </span>
-  );
-};
+  tags,
+  rounded,
+}) => (
+  <span
+    className={clsx(
+      randomChipColors[rndColors],
+      ' py-1 px-1 md:px-4 text-center text-sm max-w-lg',
+      rounded && 'rounded-xl',
+    )}
+  >
+    {`${tags ? '#' : ''}${content}`}
+  </span>
+);

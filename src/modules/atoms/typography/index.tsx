@@ -5,7 +5,7 @@ export type variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'paragraph';
 
 export interface GenericTypographyProps {
   fontSize?: string;
-  bold?: true;
+  bold?: boolean;
   color?: color;
   centered?: boolean;
   variant: variant;
@@ -21,10 +21,10 @@ const ColorMapper: Record<color, string> = {
 };
 
 const VariantMapper: Record<variant, string> = {
-  h1: 'text-3xl',
-  h2: 'text-2xl',
-  h3: 'text-xl',
-  h4: 'text-lg',
+  h1: 'tex-2xl md:text-3xl',
+  h2: 'text-xl md:text-2xl',
+  h3: 'text-lg md:text-xl',
+  h4: 'text-base md:text-lg',
   h5: 'text-base',
   paragraph: 'text-base',
 };
@@ -64,6 +64,7 @@ export const Typography: FC<GenericTypographyProps> = ({
   color = 'white',
   centered = false,
   customColor,
+  bold = false,
 }: GenericTypographyProps) => (
   <>
     {getComponent(
@@ -72,6 +73,7 @@ export const Typography: FC<GenericTypographyProps> = ({
         VariantMapper[variant],
         customColor || ColorMapper[color],
         centered ? 'text-center' : '',
+        bold ? 'font-bold' : '',
       ],
       children,
     )}

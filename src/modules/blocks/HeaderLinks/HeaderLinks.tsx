@@ -29,22 +29,27 @@ export const HeaderLinks: FC<HeaderLinksProps> = ({
       </li>
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
-          Blog
+          Let's Build!
         </Link>
       </li>
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
-          Recent Articles
+          How to?
+        </Link>
+      </li>
+      <li>
+        <Link to="/" variant={linksColor} size={linksSize}>
+          What is?
+        </Link>
+      </li>
+      <li>
+        <Link to="/" variant={linksColor} size={linksSize}>
+          About me
         </Link>
       </li>
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
           Contact
-        </Link>
-      </li>
-      <li>
-        <Link to="/" variant={linksColor} size={linksSize}>
-          eCommerce talk
         </Link>
       </li>
     </ul>

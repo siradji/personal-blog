@@ -16,10 +16,6 @@ const sizeClass = {
 
 export const AvatarComponent: FC<AvatarProps> = ({ img, imgAlt, size }) => (
   <div data-testid="main-avatar-cp">
-    <img
-      src={img}
-      alt={imgAlt}
-      className={clsx(sizeClass[size], 'rounded-full')}
-    />
+    <img src={img} alt={imgAlt} className={clsx(sizeClass[size], 'rounded-full')} />
   </div>
 );

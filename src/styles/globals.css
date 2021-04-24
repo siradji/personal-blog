@@ -40,6 +40,19 @@ button {
   width: 100%;
 }
 
+.mobile-container {
+}
+
+/* media queries */
+@media screen and (max-width: 660px) {
+  .mobile-container {
+    max-width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow-y: hidden;
+  }
+}
+
 /* gradients */
 
 .ultra-violet {
