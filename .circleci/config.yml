@@ -7,7 +7,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
+      - node/test:
           steps:
             - run: npm install
             - run: npm test
@@ -16,7 +16,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
+      - node/test:
           steps:
             - run: npm install
             - run: npm run chromatic
