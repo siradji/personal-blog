@@ -10,14 +10,14 @@ export const Footer = () => {
   return (
     <footer className=" bg-main-blue px-3 py-10">
       <Container>
-        <div className="flex flex-col md:flex-row space-x-10">
+        <div className="flex flex-col md:flex-row justify-between">
           <div className="flex flex-col space-y-3">
             <FooterIcons />
             <Typography variant="paragraph" bold color="white" centered>
               copyright @ Suraj Auwal 2021
             </Typography>
           </div>
-          <div className="space-y-4 mt-2">
+          <div className="flex flex-col space-y-4 mt-2">
             {!screenUtil.isMobile && <HeaderLinks footer />}
             <BuyMeCoffee />
           </div>
