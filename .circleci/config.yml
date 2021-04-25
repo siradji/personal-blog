@@ -1,0 +1,18 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+jobs:
+  run-unit-tests:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
+
+workflows:
+  run-unit-tests:
+    jobs:
+      - build-and-test
