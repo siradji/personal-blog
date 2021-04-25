@@ -7,20 +7,23 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/test:
-          steps:
-            - run: npm install
-            - run: npm test
+      - run:
+          name: Install Deps
+          command: npm install
+      - run:
+          name: Run Unit Test
+          command: npm test
   chromatic-deploy:
     executor:
       name: node/default
     steps:
       - checkout
-      - node/test:
-          steps:
-            - run: npm install
-            - run: npm run chromatic
-
+      - run:
+          name: Install Deps
+          command: npm install
+      - run:
+          name: Deploy Stories to Chromatic
+          command: npm run chromatic
 workflows:
   run-unit-tests:
     jobs:
