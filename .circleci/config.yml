@@ -12,9 +12,6 @@ jobs:
             - run: npm install
             - run: npm test
   chromatic-deploy:
-    filters:
-      branches:
-        only: development
     executor:
       name: node/default
     steps:
@@ -27,7 +24,14 @@ jobs:
 workflows:
   run-unit-tests:
     jobs:
-      - build-and-test
+      - build-and-test:
+        filters:
+          branches:
+            - development
+            - main
   publish-chromatic:
     jobs:
-      - chromatic-deploy
+      - chromatic-deploy:
+        filters:
+          branches:
+            only: development
