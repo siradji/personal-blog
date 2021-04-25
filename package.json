@@ -12,7 +12,8 @@
     "lint-fix": "eslint --ext .ts,.tsx . --fix",
     "format": "prettier-eslint --write /Users/siradjiawoual/projects/personal/personal-blog/'**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --project-token=45922b71742c"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -38,6 +39,7 @@
     "autoprefixer": "^10.2.5",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.6.2",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.22.1",
