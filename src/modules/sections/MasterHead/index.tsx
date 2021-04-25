@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { FeaturedArticle, AboutCard, Article } from 'modules/blocks/cards';
 import useScreenResize from 'hooks/useScreenResize';
-import { Link } from '@modules/atoms/Link';
+import { Link } from 'modules/atoms/Link';
 
 const article: Article = {
   heading: 'How to be a better react developer',
@@ -14,11 +14,7 @@ const article: Article = {
 export const MastHead: FC<{}> = () => {
   const [screenDimension] = useScreenResize();
   return (
-    <div
-      className={
-        'hidden sm:flex sm:flex-col-reverse lg:flex-row justify-between md:my-10 space-x-4'
-      }
-    >
+    <div className="hidden sm:flex sm:flex-col-reverse lg:flex-row justify-between md:my-10 space-x-4">
       <>
         <FeaturedArticle featuredArticle={article} />
         <AboutCard cardHeading="Hi, I am Suraj!">

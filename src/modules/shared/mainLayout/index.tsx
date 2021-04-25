@@ -1,4 +1,6 @@
-import { FC, ReactNode, useState, useContext } from 'react';
+import {
+  FC, ReactNode, useState, useContext,
+} from 'react';
 import { Navbar } from 'modules/sections/Navbar';
 import { SidebarContext } from 'shared-context';
 import { Footer } from 'modules/sections/footer';

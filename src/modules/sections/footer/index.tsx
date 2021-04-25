@@ -1,7 +1,7 @@
 import { BuyMeCoffee } from 'modules/atoms/button/Button';
 import { Container } from 'modules/shared';
-import { FooterIcons } from '@modules/blocks/footerIcons';
-import { HeaderLinks } from '@modules/blocks/HeaderLinks';
+import { FooterIcons } from 'modules/blocks/footerIcons';
+import { HeaderLinks } from 'modules/blocks/HeaderLinks';
 import { Typography } from 'modules/atoms/typography';
 import useScreenResize from 'hooks/useScreenResize';
 

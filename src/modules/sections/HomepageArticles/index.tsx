@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
 import data from 'mock/data/articles.json';
+import clsx from 'clsx';
 
 // components
 import { Link } from 'modules/atoms/Link';
-import { SectionFeatured } from '@modules/blocks/sectionFeatured';
+import { SectionFeatured } from 'modules/blocks/sectionFeatured';
 import { SectionHeader } from 'modules/blocks/sectionHeader';
-import { SectionRelated } from '@modules/blocks/sectionRelated';
-import clsx from 'clsx';
+import { SectionRelated } from 'modules/blocks/sectionRelated';
 
 export interface HomepageArticlesProps {
   sectionHeading: string;
