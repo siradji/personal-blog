@@ -15,6 +15,7 @@ export interface LinkProps {
   variant: LinkVariant;
   size?: LinkSize;
   underlined?: boolean;
+  ext?: boolean;
 }
 
 // mappers
@@ -37,16 +38,29 @@ export const Link: FC<LinkProps> = ({
   variant,
   size = 'md',
   underlined = false,
+  ext = false,
 }: LinkProps) => {
   const classes = [VariantMapper[variant], SizeMapper[size]];
   return (
-    <NextLink href={to}>
-      <a
-        data-testid="main-link-cp"
-        className={clsx([...classes], underlined ? 'underline' : 'no-underline')}
-      >
-        {children}
-      </a>
-    </NextLink>
+    <>
+      {ext ? (
+        <a
+          href={to}
+          data-testid="main-link-cp"
+          className={clsx([...classes], underlined ? 'underline' : 'no-underline')}
+        >
+          {children}
+        </a>
+      ) : (
+        <NextLink href={to}>
+          <a
+            data-testid="main-link-cp"
+            className={clsx([...classes], underlined ? 'underline' : 'no-underline')}
+          >
+            {children}
+          </a>
+        </NextLink>
+      )}
+    </>
   );
 };

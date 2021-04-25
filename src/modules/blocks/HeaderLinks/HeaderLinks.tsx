@@ -8,6 +8,7 @@ export interface HeaderLinksProps {
   linksColor?: LinkVariant;
   linksSize?: LinkSize;
   flow?: HeaderLinksDirection;
+  footer?: boolean;
 }
 
 const HeaderTypeMapper: Record<HeaderLinksDirection, string> = {
@@ -19,9 +20,16 @@ export const HeaderLinks: FC<HeaderLinksProps> = ({
   linksColor = 'white',
   linksSize = 'md',
   flow = 'desktop',
+  footer = false,
 }) => (
   <div data-testid="main-headerlinks-cp">
-    <ul className={clsx('flex justify-between ', HeaderTypeMapper[flow])}>
+    <ul
+      className={clsx(
+        'flex justify-between ',
+        HeaderTypeMapper[flow],
+        footer && 'flex-col md:flex-row',
+      )}
+    >
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
           Home

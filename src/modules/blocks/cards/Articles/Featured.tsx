@@ -18,25 +18,25 @@ export interface FeaturedArticleProps {
 }
 
 export const FeaturedArticle: FC<FeaturedArticleProps> = ({ featuredArticle }) => (
-  <div className="w-full md:w-4/6  py-4 px-5 rounded-lg  shadow-xl ultra-violet cursor-pointer transition duration-500 ease-in-out transform  hover:scale-110 hover:-translate-y-2">
-    <div className="flex  flex-col-reverse md:flex-row items-center  justify-between">
-      <div className="w-2/4 rounded">
+  <div className="w-full lg:w-4/6  rounded-lg  shadow-xl ultra-violet cursor-pointer transition duration-500 ease-in-out transform  hover:scale-100 hover:-translate-y-1">
+    <div className="flex flex-row items-center  justify-between">
+      <div className="w-2/4 rounded ">
         <Image
           className="w-full rounded"
           src="https://miro.medium.com/max/1400/1*jkg0mv3_tOo8zrTGGTYr4Q.png"
           alt="Top post by Suraj"
-          width={300}
-          height={150}
+          width={500}
+          height={450}
         />
       </div>
-      <div className="flex flex-col justify-center self-center space-y-4">
+      <div className="flex flex-col justify-center self-center space-y-4 py-4 px-5 ">
         <Typography variant="h1" color="white">
           {featuredArticle.heading}
         </Typography>
         <Typography variant="h4" color="white">
           {featuredArticle.preview}
         </Typography>
-        <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
+        <div className="flex flex-wrap flex-row space-x-3">
           <Chip rndColors={1} tags content="react" />
           <Chip rndColors={2} tags content="javascript" />
           <Chip rndColors={3} tags content="beginners" />

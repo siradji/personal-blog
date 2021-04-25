@@ -49,3 +49,15 @@ export const Button: FC<ButtonProps> = ({
     {children}
   </button>
 );
+
+export const BuyMeCoffee = () => {
+  return (
+    <a href="https://www.buymeacoffee.com/siradji" target="_blank">
+      <img
+        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        alt="Buy Me A Coffee"
+        style={{ height: '60px', width: '217px' }}
+      />
+    </a>
+  );
+};

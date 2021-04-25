@@ -18,27 +18,25 @@ export interface HomepageArticlesProps {
 export const HomepageArticles: FC<HomepageArticlesProps> = ({
   sectionHeading,
   sectionColor = 'text-ui-purple',
-}) => {
-  return (
-    <section className="my-5">
-      <SectionHeader
-        heading={sectionHeading}
-        lineColor={sectionColor}
-        headingColor={sectionColor}
-      />
-      <div className="flex flex-col md:flex-row justify-between flex-1 md:space-x-8">
-        <SectionFeatured data={data[0]} />
-        <div className="md:space-y-3">
-          <div className="flex flex-col space-y-5">
-            {data.slice(0, 3).map((d, i: number) => (
-              <SectionRelated data={d} key={i} />
-            ))}
-          </div>
-          <Link variant="purple" size="lg" to="/">
-            View All articles
-          </Link>
+}) => (
+  <section className="my-5">
+    <SectionHeader
+      heading={sectionHeading}
+      lineColor={sectionColor}
+      headingColor={sectionColor}
+    />
+    <div className="flex flex-col md:flex-row justify-between flex-1 md:space-x-8">
+      <SectionFeatured data={data[0]} />
+      <div className="md:space-y-3">
+        <div className="flex flex-col space-y-5">
+          {data.slice(0, 3).map((d, i: number) => (
+            <SectionRelated data={d} key={i} />
+          ))}
         </div>
+        <Link variant="purple" size="lg" to="/">
+          View All articles
+        </Link>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);

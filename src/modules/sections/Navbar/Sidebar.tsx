@@ -5,7 +5,7 @@ import { Menu, Close } from 'modules/atoms/headerIcons/index';
 export const SideBar = ({ closeModal, isOpened }) => (
   <aside
     className={clsx(
-      'lacterium shadow-2xl h-screen w-1/2 py-2 px-5 fixed top-0 right-0 transition duration-1000 ease-in-out',
+      'bg-main-blue shadow-2xl h-screen  w-3/5 py-2 px-5 fixed top-0 right-0 transition duration-1000 ease-in-out',
       isOpened && 'opacity-100 visible on-top',
       !isOpened && 'opacity-0 z-0 invisible',
     )}

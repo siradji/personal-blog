@@ -10,7 +10,9 @@ export interface SectionRelatedProps {
 }
 
 export const SectionRelated: FC<SectionRelatedProps> = ({
-  data: { title, highLight, tags, link },
+  data: {
+    title, highLight, tags, link,
+  },
 }) => {
   function turnacate(s: string, by: number): string {
     if (s.length < by) {

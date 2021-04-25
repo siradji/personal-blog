@@ -7,6 +7,7 @@ import useScreenResize from 'hooks/useScreenResize';
 import { Menu } from 'modules/atoms/headerIcons';
 import { SidebarContext } from 'shared-context';
 import { SideBar } from './Sidebar';
+import { Container } from 'modules/shared';
 
 export const Navbar: FC<{}> = () => {
   const [sidebarStatus, setSidebarStatus] = useState(false);
@@ -32,8 +33,8 @@ export const Navbar: FC<{}> = () => {
   return (
     <header>
       <nav className="bg-main-blue py-2 sticky top-0 shadow-md">
-        <div className="mobile-container max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
-          <div className="flex justify-between">
+        <Container>
+          <div className="flex justify-between items-center">
             <Logo mobile={screenDimension.isMobile} />
             {screenDimension.isMobile ? (
               <Menu onClick={handleSideBarToggle} />
@@ -41,7 +42,7 @@ export const Navbar: FC<{}> = () => {
               <HeaderLinks />
             )}
           </div>
-        </div>
+        </Container>
       </nav>
       <SideBar isOpened={sidebarStatus} closeModal={handleSideBarToggle} />
     </header>

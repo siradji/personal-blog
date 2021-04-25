@@ -11,7 +11,7 @@ export const Container: FC<ContainerProps> = ({ children }: ContainerProps) => (
   <div
     data-testid="main-container-cp"
     className={clsx(
-      'mobile-container   sm:max-w-screen-sm md:max-w-screen-lg lg:max-w-screen-xl mx-auto',
+      'mobile-container   sm:max-w-screen-sm md:max-w-screen-md  lg:max-w-screen-lg xl:max-w-screen-xl mx-auto  ',
     )}
   >
     {children}

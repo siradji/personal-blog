@@ -1,6 +1,8 @@
-import { Typography } from 'modules/atoms/typography';
+import React, { FC, ReactNode } from 'react';
 import useScreenResize from 'hooks/useScreenResize';
-import { FC, ReactNode } from 'react';
+
+import { Typography } from 'modules/atoms/typography';
+import { BuyMeCoffee } from 'modules/atoms/button/Button';
 
 export interface AboutCardInterface {
   children: ReactNode;
@@ -13,7 +15,7 @@ export const AboutCard: FC<AboutCardInterface> = ({
   const [mobileUtil] = useScreenResize();
 
   return (
-    <div className="w-96 md:w-1/4 hidden md:block shadow-sm p-4 rounded bg-transparent">
+    <div className="w-full lg:w-1/4 shadow-sm p-4 rounded bg-transparent">
       <div className=" flex flex-col items-center space-y-4">
         <Typography variant="h1" color="dark" centered>
           {cardHeading}
@@ -21,6 +23,9 @@ export const AboutCard: FC<AboutCardInterface> = ({
         <Typography variant="paragraph" color="dark" centered>
           {children}
         </Typography>
+        <div>
+          <BuyMeCoffee />
+        </div>
       </div>
     </div>
   );

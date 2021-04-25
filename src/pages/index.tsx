@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Javascript development blog - Suraj Auwal </title>
+        <title>Javascrip - Suraj Auwal </title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <main>
