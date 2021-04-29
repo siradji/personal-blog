@@ -18,7 +18,7 @@ const IconsMapper: Record<Fill, string> = {
 export const HamburgerMenuIcon: FC<IconProps> = ({ fill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${height} w-${width}`}
+    className="h-7 w-7"
     fill={IconsMapper[fill]}
     viewBox="0 0 24 24"
     stroke={IconsMapper[fill]}
@@ -35,7 +35,7 @@ export const HamburgerMenuIcon: FC<IconProps> = ({ fill, width, height }) => (
 export const CloseIcon: FC<IconProps> = ({ fill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${height} w-${width}`}
+    className="h-7 w-7"
     fill={IconsMapper[fill]}
     viewBox="0 0 24 24"
     stroke="currentColor"

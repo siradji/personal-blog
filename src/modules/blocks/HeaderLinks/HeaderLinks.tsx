@@ -12,7 +12,7 @@ export interface HeaderLinksProps {
 }
 
 const HeaderTypeMapper: Record<HeaderLinksDirection, string> = {
-  desktop: 'flex-row md:space-x-4',
+  desktop: 'flex-row ',
   mobile: 'flex-col space-y-4',
 };
 
@@ -25,16 +25,19 @@ export const HeaderLinks: FC<HeaderLinksProps> = ({
   <div data-testid="main-headerlinks-cp">
     <ul
       className={clsx(
-        'flex justify-between ',
+        'flex justify-between',
         HeaderTypeMapper[flow],
-        footer && 'flex-col md:flex-row',
+        footer && 'flex-col space-y-1 items-start',
+        !footer && 'md:space-x-4',
       )}
     >
-      <li>
-        <Link to="/" variant={linksColor} size={linksSize}>
-          Home
-        </Link>
-      </li>
+      {!footer && (
+        <li>
+          <Link to="/" variant={linksColor} size={linksSize}>
+            Home
+          </Link>
+        </li>
+      )}
       <li>
         <Link to="/" variant={linksColor} size={linksSize}>
           Let's Build!
