@@ -14,6 +14,7 @@ export interface ButtonProps {
   children: ReactChild;
   variant: ButtonVariant;
   rounded?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const ButtonMapper: Record<ButtonVariant, string> = {
@@ -36,8 +37,10 @@ export const Button: FC<ButtonProps> = ({
   variant,
   children,
   rounded = false,
+  type = 'button',
 }) => (
   <button
+    type={type}
     data-testid="main-button-cp"
     onClick={(e: any) => onClick(e)}
     className={clsx(

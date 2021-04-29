@@ -18,7 +18,7 @@ const IconsMapper: Record<Fill, string> = {
 export const HamburgerMenuIcon: FC<IconProps> = ({ fill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${height} w-${width}`}
+    className="h-7 w-7"
     fill={IconsMapper[fill]}
     viewBox="0 0 24 24"
     stroke={IconsMapper[fill]}
@@ -35,7 +35,7 @@ export const HamburgerMenuIcon: FC<IconProps> = ({ fill, width, height }) => (
 export const CloseIcon: FC<IconProps> = ({ fill, width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-${height} w-${width}`}
+    className="h-7 w-7"
     fill={IconsMapper[fill]}
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -101,8 +101,8 @@ export const MessagerIcon = () => (
 export const TwitterIcon = () => (
   <svg
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     version="1.1"
@@ -127,8 +127,8 @@ export const MeduimIcon = () => (
     version="1.1"
     xmlSpace="preserve"
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 512 512"
@@ -147,8 +147,8 @@ export const TwitchIcon = () => (
     version="1.1"
     xmlSpace="preserve"
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 512 512"
@@ -193,8 +193,8 @@ export const LinkedinIcon = () => (
     version="1.1"
     xmlSpace="preserve"
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 512 512"
@@ -238,8 +238,8 @@ export const StackoverflowIcon = () => (
     version="1.1"
     xmlSpace="preserve"
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 512 512"
@@ -284,8 +284,8 @@ export const GithubIcon = () => (
     version="1.1"
     xmlSpace="preserve"
     className="h-12 w-12"
-    fill-Rule="evenodd"
-    clip-Rule="evenodd"
+    fillRule="evenodd"
+    clipRule="evenodd"
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 512 512"
