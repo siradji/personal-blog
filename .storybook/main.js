@@ -1,8 +1,8 @@
 const path  = require('path')
 module.exports = {
   "stories": [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/stories/**/*.stories.mdx",
+    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
@@ -10,15 +10,15 @@ module.exports = {
     "@storybook/addon-postcss"
   ],
   webpackFinal: async (config, { configType }) => {
-    config.resolve.modules.push(path.resolve(__dirname, '../.'));
+    config.resolve.modules.push(path.resolve(__dirname, '../src/.'));
     return config;
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      '@components': path.resolve(__dirname, '../.', 'components'),
-      '@pages': path.resolve(__dirname, '../.', 'utils'),
-      '@utils': path.resolve(__dirname, '../.', 'pages'),
+      '@modules': path.resolve(__dirname, '../src/', 'components'),
+      '@pages': path.resolve(__dirname, '../src/', 'utils'),
+      '@utils': path.resolve(__dirname, '../src/', 'pages'),
     },
   },
    
