@@ -12,6 +12,7 @@ export interface InputProps {
   type?: inputType;
   variant: variant;
   width?: string;
+  name?: string;
 }
 
 const VariantMapper: Record<variant, string> = {
@@ -35,21 +36,21 @@ const Component: FC<InputProps> = ({
   onFocus = null,
   variant = 'primary',
   width,
-}) => {
-  return (
-    <input
-      placeholder={placeholder}
-      type={type}
-      value={value}
-      onChange={onChange}
-      onFocus={onFocus ?? null}
-      className={clsx(
-        VariantMapper[variant],
-        'outline-none focus:ring-2 focus:ring-ui-purple shadow-md rounded-md py-3 px-4 text-main-blue text-lg',
-        width ? widthMapper[width] : 'w-full',
-      )}
-    />
-  );
-};
+  name,
+}) => (
+  <input
+    placeholder={placeholder}
+    type={type}
+    name={name ?? 'field'}
+    value={value}
+    onChange={onChange}
+    onFocus={onFocus ?? null}
+    className={clsx(
+      VariantMapper[variant],
+      'outline-none focus:ring-2 focus:ring-ui-purple shadow-md rounded-md py-3 px-4 text-main-blue text-lg',
+      width ? widthMapper[width] : 'w-full',
+    )}
+  />
+);
 
 export const InputComponent = memo(Component);
